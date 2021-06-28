@@ -12,7 +12,7 @@ public interface DoadorService {
 	@RequestLine("GET /doador/getDoadorPorEstado/{estado}")
 	Integer getCandidatosPorEstados(@Param("estado")String estado) throws Exception;
 
-	@RequestLine("GET /doador/icmMedioPorIdade")
+	@RequestLine("GET /doador/getIcmMedioPorIdade")
 	List<ImcMedioPorIdadeBean> getImcMedioPorIdades()throws Exception;
 
 	@RequestLine("GET /doador/getPercentualObesos/{sexo}")
