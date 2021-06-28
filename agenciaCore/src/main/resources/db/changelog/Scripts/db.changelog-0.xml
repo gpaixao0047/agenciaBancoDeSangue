@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+	
+		<changeSet id="0" author="guilherme.paixao">
+		<preConditions onFail="MARK_RAN">
+			<not>
+				<tableExists tableName="DOADOR" />
+			</not>
+		</preConditions>
+		<createTable tableName="DOADOR">
+			<column name="ID_DOADOR" type="int" remarks="Id Doador int"> <constraints nullable="false" />
+			</column>
+			<column name="NOME" type="varchar" remarks="Nome doador String">
+				<constraints nullable="false" />
+			</column>
+			<column name="CPF" type="varchar" remarks="Cpf">
+				<constraints nullable="false" />
+			</column>
+			<column name="RG" type="varchar" remarks="Rg">
+				<constraints nullable="false" />
+			</column>
+			<column name="DATA_NASCIMENTO" type="date" remarks="data nascimento">
+				<constraints nullable="false" />
+			</column>
+			<column name="SEXO" type="varchar" remarks="Sexo">
+				<constraints nullable="false" />
+			</column>
+			<column name="MAE" type="varchar" remarks="Mae">
+				<constraints nullable="false" />
+			</column>
+			<column name="PAI" type="varchar" remarks="Pai">
+				<constraints nullable="false" />
+			</column>
+			<column name="EMAIL" type="varchar" remarks="Email">
+				<constraints nullable="false" />
+			</column>
+			<column name="CEP" type="varchar" remarks="Cep">
+				<constraints nullable="false" />
+			</column>
+			<column name="ENDERECO" type="varchar" remarks="Endereco">
+				<constraints nullable="false" />
+			</column>
+			<column name="NUMERO" type="int" remarks="Numero">
+				<constraints nullable="false" />
+			</column>
+			<column name="BAIRRO" type="varchar" remarks="Bairro">
+				<constraints nullable="false" />
+			</column>
+			<column name="CIDADE" type="varchar" remarks="Cidade">
+				<constraints nullable="false" />
+			</column>
+			<column name="ESTADO" type="varchar" remarks="Estado">
+				<constraints nullable="false" />
+			</column>
+			<column name="TELEFONE_FIXO" type="varchar" remarks="Telefone Fixo">
+				<constraints nullable="false" />
+			</column>
+			<column name="CELULAR" type="varchar" remarks="Celular">
+				<constraints nullable="false" />
+			</column>
+			<column name="ALTURA" type="double" remarks="Altura">
+				<constraints nullable="false" />
+			</column>
+			<column name="PESO" type="int" remarks="Peso">
+				<constraints nullable="false" />
+			</column>
+			<column name="TIPO_SANGUINEO" type="varchar" remarks="Peso">
+				<constraints nullable="false" />
+			</column>
+			<column name="IDADE" type="int" remarks="Indade">
+				<constraints nullable="false" />
+			</column>
+			<column name="IMC" type="double" remarks="imc">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+		<rollback>
+			<dropTable tableName="DOADOR" />
+		</rollback>
+	</changeSet>
+	
+		<changeSet id="1" author="guilherme.paixao">
+		<preConditions onFail="MARK_RAN">
+			<not>
+				<primaryKeyExists primaryKeyName="PK_DOADOR" />
+			</not>
+		</preConditions>
+		<addPrimaryKey tableName="DOADOR"
+			columnNames="ID_DOADOR" constraintName="PK_DOADOR" />
+		<rollback>
+			<dropTable tableName="DOADOR" />
+		</rollback>
+	</changeSet>
+	
+		<changeSet id="2" author="guilherme.paixao">
+		<preConditions onFail="MARK_RAN">
+			<not>
+				<sequenceExists sequenceName="SEQ_DOADOR" />
+			</not>
+		</preConditions>
+		<createSequence sequenceName="SEQ_DOADOR"
+			cycle="false" />
+		<rollback>
+			<dropSequence sequenceName="SEQ_DOADOR" />
+		</rollback>
+	</changeSet>
+	
+
+</databaseChangeLog>
