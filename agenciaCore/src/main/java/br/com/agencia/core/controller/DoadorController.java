@@ -42,7 +42,7 @@ public class DoadorController {
 		return ok(doadoresPorEstado);
 	}
 	
-	@GetMapping("/icmMedioPorIdade")
+	@GetMapping("/getIcmMedioPorIdade")
 	@Transactional
 	public ResponseEntity<List<ImcMedioPorIdadeQuery>> getIcmMedioPorIdade(){
 		List<ImcMedioPorIdadeQuery>icmMedioPorIdadeQuery = service.getImcMedioPorIdade();
