@@ -10,10 +10,10 @@ Para cadastrar os doadores precisa pegar o Json-Atualizado, fazer uma requisiç�
 Para subir o projeto Agencia Front precisa wildfly(Utilizei versão 17), e acesse a url http://localhost:8080/home.xhtml
 
 Mudanças no Json:
-data_nasc -> dataNasc
-\/ -> / 
-telefone_fixo -> telefoneFixo
-tipo_sanguineo -> tipoSanguineo
+data_nasc p/: dataNasc
+em dataNasc o valor com as "\/" foi trocado para: \/ -> / 
+telefone_fixo p/: telefoneFixo
+tipo_sanguineo p/ : tipoSanguineo
 
 
 
