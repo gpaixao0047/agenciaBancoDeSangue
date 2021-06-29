@@ -1,4 +1,4 @@
-# Projeto Agênciad e banco de sangue
+# Projeto Agência de banco de sangue
 Agência de banco de sangue, Front implementado utilizando JSF,Primefaces,Wildfly. Core utiliza Spring Boot, liquibase e Postgres. Ide utilizada Eclipse.
 
 Configuração:
