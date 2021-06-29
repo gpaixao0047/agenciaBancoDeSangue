@@ -1,8 +1,8 @@
 # Projeto Agência de banco de sangue
-Agência de banco de sangue, Front implementado utilizando JSF,Primefaces,Wildfly. Core utiliza Spring Boot, liquibase e Postgres. Ide utilizada foi o Eclipse.
+Agência de banco de sangue, Front implementado utilizando JSF,Primefaces,Wildfly. Core utiliza Spring Boot, liquibase e Postgres. Ide utilizado foi o Eclipse.
 
 Configuração:
-Projeto Agencia Core precisa alterar usuario e senha do postgres, em application.properties.
+Projeto Agência Core precisa alterar usuário e senha do postgres, em application.properties.
 
 
 Para cadastrar os doadores precisa pegar o Json-Atualizado, fazer uma requisição POST para http://localhost:8070/api/doador (Utilizei Postmen para realizar o cadastro) passando também usuario "gpaixao" e senha "123456" no basic Auth.
@@ -14,6 +14,5 @@ data_nasc p/: dataNasc
 em dataNasc o valor com as "\/" foi trocado para: \/ -> / 
 telefone_fixo p/: telefoneFixo
 tipo_sanguineo p/ : tipoSanguineo
-
 
 
