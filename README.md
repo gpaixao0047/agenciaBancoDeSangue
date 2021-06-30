@@ -1,5 +1,5 @@
 # Projeto Agência de banco de sangue
-Agência de banco de sangue, Front implementado utilizando JSF,Primefaces,Wildfly. Core utiliza Spring Boot, liquibase e Postgres. Ide utilizado foi o Eclipse.
+Agência de banco de sangue, Front implementado utilizando JSF,Primefaces,Wildflye lombok. Core utiliza Spring Boot, liquibase, lombok e Postgres. Ide utilizado foi o Eclipse.
 
 Configuração:
 Projeto Agência Core precisa alterar usuário e senha do postgres, em application.properties.
